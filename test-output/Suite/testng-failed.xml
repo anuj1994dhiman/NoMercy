@@ -5,17 +5,11 @@
     <listener class-name="NoMercy.Base.MyListener"/>
   </listeners>
   <test thread-count="5" name="Test(failed)">
-    <groups>
-      <run>
-        <include name="smoke"/>
-        <include name="sanity"/>
-      </run>
-    </groups>
     <classes>
       <class name="NoMercy.Test.LoginTest">
         <methods>
-          <include name="test2"/>
           <include name="terminateBrowser"/>
+          <include name="test2"/>
           <include name="launchHomePage"/>
         </methods>
       </class> <!-- NoMercy.Test.LoginTest -->

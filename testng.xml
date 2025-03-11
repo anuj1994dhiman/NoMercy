@@ -7,8 +7,7 @@
   <test thread-count="5" name="Test">
 	  <groups>
 		  <run>
-			  <include name="smoke"></include>
-			  <include name="sanity"></include>
+			  <include name="Smoke"></include>
 		  </run>
 	  </groups>
     <classes>

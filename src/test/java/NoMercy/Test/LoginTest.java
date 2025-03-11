@@ -32,14 +32,14 @@ public class LoginTest extends BaseTest {
 //		
 //	}
 	// taking data through xcel file
-	@Test(dataProvider = "provideDataToTest", groups = "smoke")
+	@Test(dataProvider = "provideDataToTest", groups = "Sanity")
 	public void test1(String uName, String pass) {
 		ProductsPage productsPage = landingPage.login(uName, pass);
 		Assert.assertEquals(productsPage.getcatPagetext(), "Automation Practice");
 
 	}
 
-	@Test(retryAnalyzer = MyRetry.class, groups ="sanity")
+	@Test(retryAnalyzer = MyRetry.class, groups = "Smoke")
 	public void test2() throws InterruptedException {
 		landingPage.login("anu@example.com", "bchfnfjc");
 		Assert.assertEquals("Incorrect email o password.", landingPage.getErrorMsg());
